@@ -13,7 +13,7 @@ export class WelcomeComponent  {
     showMessage(name : string) {
         if(name == "")
            name = "Guest";
-           
+
         this.message = `${name},  Welcome to Angular!!!`
 
     }

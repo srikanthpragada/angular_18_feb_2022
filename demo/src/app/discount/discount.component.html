@@ -1,0 +1,11 @@
+
+<h2>Discount Calculation</h2>
+Price : <input type="number" #price />
+<p></p>
+Discount Rate : <input type="number" #disrate />
+<p></p>
+<input type="checkbox" #round>Round Discount
+<p></p>
+<button (click)="calculate(price.value, disrate.value, round.checked )">Calculate</button>
+
+<h2>{{discount}}</h2>
