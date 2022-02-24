@@ -1,0 +1,30 @@
+
+<h1>Courses </h1>
+
+Course name <br/>
+<input type="text" #courseName style="width:200px" />
+<p></p>
+Student Count<br/>
+<input type="text" #studentCount style="width:200px" />
+<P></P>
+<button (click)="addCourse(courseName.value, studentCount.value)">Add Course</button>
+<p></p>
+<div *ngIf="courses.length > 0;else noCourses">
+   <table style="width:100%" border="1">
+        <tr>
+            <th>Course Name</th>
+            <th>Student Count</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let c of courses; let idx = index" style="text-align:center" >
+            <td>{{c.name}}</td>
+            <td>{{c.count}}</td>
+            <td><button (click)="deleteCourse(idx)">Delete</button></td>
+        </tr>
+   </table>
+
+</div>
+
+<ng-template #noCourses>
+     <h4>No courses!</h4>
+</ng-template>

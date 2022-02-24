@@ -4,16 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { DiscountComponent } from './discount/discount.component';
 import { BindingsComponent } from './bindings/bindings.component';
+// import { DirectivesComponent } from './directivesdemo/directives.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
-    BindingsComponent
+     CoursesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [BindingsComponent]
+  bootstrap: [CoursesComponent]
 })
 export class AppModule { }
