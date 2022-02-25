@@ -6,16 +6,20 @@ import { DiscountComponent } from './discount/discount.component';
 import { BindingsComponent } from './bindings/bindings.component';
 // import { DirectivesComponent } from './directivesdemo/directives.component';
 import { CoursesComponent } from './courses/courses.component';
+// import { PipesDemoComponent } from './pipes/pipesdemo.component';
+import { BracketsPipe } from './pipes/brackets.pipe';
+import { OneComponent } from './icc/one.component';
+import { TwoComponent } from './icc/two.component';
 
 @NgModule({
   declarations: [
-     CoursesComponent
+     OneComponent, TwoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [CoursesComponent]
+  bootstrap: [OneComponent, TwoComponent]
 })
 export class AppModule { }

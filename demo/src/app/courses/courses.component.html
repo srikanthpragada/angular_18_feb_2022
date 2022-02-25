@@ -2,7 +2,7 @@
 <h1>Courses </h1>
 
 Course name <br/>
-<input type="text" #courseName style="width:200px" />
+<input type="text" #courseName style="width:200px" /> <span>{{message}}</span>
 <p></p>
 Student Count<br/>
 <input type="text" #studentCount style="width:200px" />
@@ -22,7 +22,7 @@ Student Count<br/>
             <td><button (click)="deleteCourse(idx)">Delete</button></td>
         </tr>
    </table>
-
+   <h4>Total no. of students : {{getTotal()}}</h4>
 </div>
 
 <ng-template #noCourses>
