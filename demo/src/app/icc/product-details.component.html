@@ -1,7 +1,9 @@
 <div style="background-color: silver">
     <h2>{{product.name}} </h2>
     <h2>{{product.price}} INR </h2>
-    <button (click)="showBestPrice()" *ngIf="product.inoffer">Show Best Price</button>
-    <button (click)="deleteProduct()">Delete</button>
+    <button (click)="showBestPrice()" class="btn-primary" 
+         *ngIf="product.inoffer">Show Best Price</button>
+    &nbsp;
+    <button  class="btn-danger" (click)="deleteProduct()">Delete</button>
 </div>
 <p></p>

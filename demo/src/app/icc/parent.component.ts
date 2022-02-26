@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'st-first',
+    selector: 'st-parent',
     template: 
-    `<h1>First (Parent) Component </h1>
-     <st-second [message]="today" (process)="doAnotherProcess($event)"></st-second>
+    `<h1>Parent Component </h1>
+     <st-child [message]="today" (process)="doAnotherProcess($event)"></st-child>
      <hr/>
-     <st-second [message]="'Another Message'" (process)="doProcess($event)"></st-second>
+     <st-child [message]="'Another Message'" (process)="doProcess($event)"></st-child>
+     <hr />
+     <st-child></st-child>
     `
 })
-export class FirstComponent  {
+export class ParentComponent  {
     today : string = new Date().toString()
 
     // Event Handler for process event 

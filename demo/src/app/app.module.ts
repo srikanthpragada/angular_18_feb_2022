@@ -8,18 +8,19 @@ import { BindingsComponent } from './bindings/bindings.component';
 import { CoursesComponent } from './courses/courses.component';
 // import { PipesDemoComponent } from './pipes/pipesdemo.component';
 import { BracketsPipe } from './pipes/brackets.pipe';
-import { OneComponent } from './icc/one.component';
-import { TwoComponent } from './icc/two.component';
+import { ProductsListComponent } from './icc/products-list.component';
+import { ProductDetailsComponent } from './icc/product-details.component';
 
 @NgModule({
   declarations: [
-     OneComponent, TwoComponent
+        ProductsListComponent, ProductDetailsComponent
+        
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [OneComponent, TwoComponent]
+  bootstrap: [ ProductsListComponent ]
 })
 export class AppModule { }

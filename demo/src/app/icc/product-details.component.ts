@@ -7,9 +7,8 @@ import { Product } from "./Product"
 })
 export class ProductDetailsComponent {
     // input property 
-    @Input() product: Product;
-    @Input() id: number;
-
+    @Input() product : Product = {name : "", price : 0, inoffer : false};
+    @Input() id : number = 0;
     discounted: boolean = false;
 
     // event 

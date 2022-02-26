@@ -6,7 +6,7 @@ import { Product } from "./Product"
 })
 export class ProductsListComponent implements OnInit, OnDestroy{
     products : Product[] =
-    [{name: "iPhone 11", price: 80000 , inoffer : true },
+    [{name: "iPhone 113", price: 80000 , inoffer : true },
     { name: "Google Pixel 4A", price: 60000 , inoffer : true},
     { name: "Samsung 12", price: 70000, inoffer : false }
     ];
