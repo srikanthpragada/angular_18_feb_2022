@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RegisterComponent } from './forms/register.component';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
-import { DiscountComponent } from './discount/discount.component';
-import { BindingsComponent } from './bindings/bindings.component';
-import { PushComponent } from './service/push.component';
-import { PopComponent } from './service/pop.component';
-import { StackService } from './service/stack.service';
+// import { AppRoutingModule } from './app-routing.module';
+// import { DiscountComponent } from './discount/discount.component';
+// import { BindingsComponent } from './bindings/bindings.component';
+// import { PushComponent } from './service/push.component';
+// import { PopComponent } from './service/pop.component';
+// import { StackService } from './service/stack.service';
 // import { DirectivesComponent } from './directivesdemo/directives.component';
 // import { CoursesComponent } from './courses/courses.component';
 // import { PipesDemoComponent } from './pipes/pipesdemo.component';
@@ -17,13 +19,14 @@ import { StackService } from './service/stack.service';
 
 @NgModule({
   declarations: [
-        PushComponent, PopComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule
+    //AppRoutingModule
   ],
-  providers: [ StackService],
-  bootstrap: [ PushComponent, PopComponent ]
+  providers: [],
+  bootstrap: [RegisterComponent]
 })
 export class AppModule { }

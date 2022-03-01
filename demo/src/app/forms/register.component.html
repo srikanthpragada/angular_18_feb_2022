@@ -1,11 +1,12 @@
 <style>
     input.ng-invalid {
-        color: red
+        color: red;
+        border : 5px solid red;
     }
 
     input.ng-valid {
         color:green
-    }
+    } 
 </style>
 
 <form (ngSubmit)="register(regForm)" #regForm="ngForm" novalidate>
@@ -16,11 +17,11 @@
                        #username="ngModel" />
 
      <span *ngIf="username.errors?.minlength">
-          Required length is {{username.errors.minlength.requiredLength}} but you entered only 
-              {{username.errors.minlength.actualLength}}
+          Required length is {{username.errors?.minlength?.requiredLength}} but you entered only 
+              {{username.errors?.minlength?.actualLength}}
      </span>
 
-     <span *ngIf="username.errors?.required">
+     <span *ngIf="regForm.submitted && username.errors?.required">
          Please enter username!
      </span>
 
@@ -33,12 +34,17 @@
 
     <p></p>
     User's Age <br />
-    <input type="number" [(ngModel)]="age" name="age" required #agerv="ngModel" />
+    <input type="number" [(ngModel)]="age" name="age" required 
+          #agerv="ngModel" />
+
     <span *ngIf="regForm.submitted">
-        <span *ngIf="agerv.errors?.required">Missing Age</span>
+        <span *ngIf="agerv.errors?.required">Missing Age. Please enter age in years!</span>
     </span>
     <p></p>
+    <!-- Submit button-->
+    <!-- <button [disabled] = "regForm.invalid">Register</button> -->
     <button>Register</button>
+
 </form>
 
 <h3>Data</h3>
