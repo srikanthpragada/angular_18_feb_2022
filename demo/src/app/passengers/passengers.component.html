@@ -1,0 +1,47 @@
+<h2>Passengers</h2>
+
+
+<form #pform="ngForm" novalidate>
+    Name <br />
+    <input type="text" #pname="ngModel" name="pname" pattern="[A-Za-z ]+"
+          [(ngModel)]="passenger.name" required />
+    <span *ngIf="pname.dirty && pname.errors?.required">Please enter name!</span>
+    <span *ngIf="pname.dirty && pname.errors?.['pattern']">Name can contains alphabets and spaces only!</span>
+    <p></p>
+    Age <br />
+    <input type="number" #age="ngModel" name="age" [(ngModel)]="passenger.age" required />
+    <span *ngIf="age.dirty && age.errors?.['required']">Please enter age!</span>
+    <p></p>
+    Gender :
+    <input name="gender" type="radio" value="m" [(ngModel)]="passenger.gender">Male
+    <input type="radio" name="gender" value="f" [(ngModel)]="passenger.gender">Female
+    <p></p>
+    <button [disabled]="pform.invalid" (click)="addPassenger()">Add</button>
+</form>
+
+{{pname.errors | json}}
+
+<p></p>
+
+<div *ngIf="passengers.length > 0">
+    <table class="table text-center" >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of passengers; let idx = index">
+                <td>{{p.name}}</td>
+                <td>{{p.age}}</td>
+                <td>{{p.gender == 'm' ? 'Male' : 'Female'}}</td>
+                <td style="width:20%">
+                    <button class="btn btn-danger" (click)="deletePassenger(idx)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
