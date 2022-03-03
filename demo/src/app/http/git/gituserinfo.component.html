@@ -1,0 +1,9 @@
+<h2>GitHub User Info</h2>
+Username : <input type="text" #uname value="srikanthpragada" />
+<br/>
+<button (click)="getUserInfo(uname.value)">Get Info</button>
+
+<h3>{{gituser.name}}</h3>
+
+<img [src]="gituser.avatar_url" />
+
