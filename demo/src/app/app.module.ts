@@ -7,11 +7,12 @@ import { BrowserModule } from '@angular/platform-browser';
 // import { PassengersComponent } from './passengers/passengers.component';
 import {HttpClientModule} from '@angular/common/http'
 import { GitUserInfoComponent } from './http/git/gituserinfo.component';
+import { BooksComponent } from './http/bookscurd/books.component';
 
  
 @NgModule({
   declarations: [
-     GitUserInfoComponent
+      BooksComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +20,6 @@ import { GitUserInfoComponent } from './http/git/gituserinfo.component';
     //AppRoutingModule
   ],
   providers: [],
-  bootstrap: [GitUserInfoComponent]
+  bootstrap: [BooksComponent]
 })
 export class AppModule { }

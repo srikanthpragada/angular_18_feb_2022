@@ -1,9 +1,11 @@
 <h2>GitHub User Info</h2>
 Username : <input type="text" #uname value="srikanthpragada" />
-<br/>
+<br />
 <button (click)="getUserInfo(uname.value)">Get Info</button>
+<h5 *ngIf="process">Processing...</h5>
+<div *ngIf="!message">
+    <h3>{{gituser.name}}</h3>
+    <img [src]="gituser.avatar_url" />
+</div>
 
-<h3>{{gituser.name}}</h3>
-
-<img [src]="gituser.avatar_url" />
-
+<h3>{{message}}</h3>
