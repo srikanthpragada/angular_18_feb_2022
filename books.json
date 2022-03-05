@@ -2,7 +2,7 @@
   "books": [
     {
       "id": 1,
-      "title": "Book 1",
+      "title": "Book One",
       "price": 1000
     },
     {
@@ -21,9 +21,14 @@
       "id": 4
     },
     {
-      "title": "Book 5",
-      "price": 1250,
+      "title": "New Book1",
+      "price": "340",
       "id": 5
+    },
+    {
+      "title": "dsajljflkj",
+      "price": "3434",
+      "id": 6
     }
   ]
 }
