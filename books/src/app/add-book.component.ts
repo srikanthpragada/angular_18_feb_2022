@@ -15,7 +15,7 @@ export class AddBookComponent {
     // Get access to form to access properties of the form 
     @ViewChild('bookForm') bookForm?: FormGroup; 
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient) { 
         this.book = { title: "", price: 0 }
     }
 
